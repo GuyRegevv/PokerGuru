@@ -40,7 +40,7 @@ The Game Engine never talks directly to the Advisor. Instead:
 ## 4. Suggested File Structure
 
 ```text
-poker-trainer/
+poker-guru/
 ├── go.mod                # Go module definition
 ├── main.go               # Entry point (initializes Game and UI)
 ├── model/                # SHARED DATA STRUCTURES (The "Language")
@@ -106,7 +106,7 @@ type PlayerSnapshot struct {
 ```go
 package agents
 
-import "poker-trainer/model"
+import "poker-guru/model"
 
 // Composition: Any struct with this method can play the game
 type Agent interface {
@@ -120,7 +120,7 @@ type Agent interface {
 ```go
 package advisor
 
-import "poker-trainer/model"
+import "poker-guru/model"
 
 type Advice struct {
     Suggestion string // "FOLD", "CALL", "RAISE"
@@ -148,7 +148,4 @@ func Analyze(snap model.GameSnapshot) Advice {
 
 ```
 
-### Next Action for User
-When you are ready to start coding, give the LLM this summary and ask:
-*"I am ready to start Phase 1. Please help me initialize the Go project and write the `model/types.go` file based on this plan."*
 ```
