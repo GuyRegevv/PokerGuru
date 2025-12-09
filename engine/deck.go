@@ -35,7 +35,7 @@ func NewDeck() *Deck {
 	}
 }
 
-func DrawCard(d *Deck) (model.Card, error) {
+func (d *Deck) DrawCard() (model.Card, error) {
 	if len(d.cards) == 0 {
 		if len(d.cards) == 0 {
 			return model.Card{}, fmt.Errorf("deck is empty")

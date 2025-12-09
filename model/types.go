@@ -90,7 +90,7 @@ type Action struct {
 
 // Player represents a player in the game.
 type Player struct {
-	Name  string  // Player's name
-	Stack int     // Player' s current stack size
-	Hand  [2]Card // Player's current hand
+	Name  string // Player's name
+	Stack int    // Player' s current stack size
+	Hand  []Card // Player's current hand
 }
